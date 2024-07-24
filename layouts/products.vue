@@ -1,20 +1,20 @@
 <template>
     <div>
-        <header>
+        <header class="shadow-sm bg-white">
             
-            <nav>
-                <NuxtLink to="/">Nuxt-Atelier Merch</NuxtLink>
+            <nav class="container mx-auto p-4 flex justify-between">
+                <NuxtLink to="/" class="font-bold">Nuxt-Atelier Merch</NuxtLink>
                 <h2>Product's Layout</h2>
             </nav>
         </header>    
 
 <!-- output the page content -->
-        <div>
+        <div class="container mx-auto p-4">
             <slot />
         </div>    
         
-        <footer>
-            <ul>
+        <footer class="container mx-auto p-4 flex justify-between-border-t-2">
+            <ul class="flex gap-4">
                 <li><NuxtLink to="/">Home</NuxtLink></li>
                 <li><NuxtLink to="/about">About</NuxtLink></li>
                 <li><NuxtLink to="/products">Products</NuxtLink></li>
@@ -26,17 +26,7 @@
 
 
 <style  scoped>
-    h1 {
-        margin-bottom: 20px;
-        font-size: 36px;
-        color:rgb(247, 16, 8)
-    }
-    h2 {
-        margin-bottom: 20px;
-        font-size: 36px;
-        color:rgb(12, 67, 129)
-    }
-    p {
-        margin: 20 px 0;
+    .router-link-exact-active {
+        color: rgb(245, 13, 25);
     }
 </style>
