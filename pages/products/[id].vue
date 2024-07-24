@@ -11,6 +11,9 @@
 
 <script setup>
     const { id } = useRoute().params //this tells vue the "id" variable is coming from the route parameters
+definePageMeta({
+     layout: 'products',
+ })
 </script>
 
 <style  scoped>

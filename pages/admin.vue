@@ -1,16 +1,17 @@
 <template>
     <div>
         <h2>Admin</h2>
-        <p>page Admin.</p>
-        
     </div>
 </template>
 
 <script setup>
+   
+   definePageMeta({
+     layout: 'products',
+ })
 
 </script>
-
-<style  scoped>
+<style scoped>
 
     h2 {
         margin-bottom: 20px;
