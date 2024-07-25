@@ -1,6 +1,12 @@
 <template>
     <div>
-        <h1>Products</h1>
+        <div class="grid grid-cols-4 gap-5">
+            <div v-for="product in products">
+                
+               <ProductsCard :product="product" />
+            </div>
+
+        </div>
         
         <p>photo</p>
         
@@ -8,18 +14,19 @@
 </template>
 
 <script setup>
-     definePageMeta({
-     layout: 'products'
- })
-</script>
+ const {id} = useRoute().params
+ const uri = `https://fakestoreapi.com/products/${id}`
 
+definePageMeta({
+layout: 'products',
+colorMode: 'light'
+ })
+
+//fetch the products from the API
+const {data: products} =await useFetch('https://fakestoreapi.com/products')
+     
+</script>
+  
 <style scoped>
-    .h2 {
-        margin-bottom: 20px;
-        font-size: 36px;
-        color:brown
-    }
-    .p {
-        margin: 20 px 0;
-    }
+   
 </style>

@@ -8,6 +8,7 @@
    
    definePageMeta({
      layout: 'products',
+     colorMode: 'light'
  })
 
 </script>
