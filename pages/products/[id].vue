@@ -1,10 +1,8 @@
 <template>
     <div>
         
-        <p>Product details for {{ id }}</p> <!-- double curly braces are used to display the value of a variable -->
-        <p>{{product.title}}</p>
-        <p>{{product.price}}</p>
-        <p>{{product.id}}</p>
+       <!-- <p>Product details for {{ id }}</p>  double curly braces are used to display the value of a variable -->
+        <ProductsDetails :product="product"/>
 
     </div>
 </template>
@@ -15,7 +13,7 @@
 
     //fetch the product
 
-    const {data: product} = await useFetch(uri)
+    const {data: product} = await useFetch(uri, {key: id})
 
  
 definePageMeta({
